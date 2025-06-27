@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,28 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="min-h-screen flex items-center justify-center relative overflow-hidden" style="background: linear-gradient(135deg, #0a0e23 0%, #1a225a 100%); font-family: 'Inter', Arial, Helvetica, sans-serif;">
+
+<body class="min-h-screen flex items-center justify-center relative overflow-hidden"
+    style="background: linear-gradient(135deg, #0a0e23 0%, #1a225a 100%); font-family: 'Inter', Arial, Helvetica, sans-serif;">
     <!-- Background shapes -->
-    <img src="../assets/bg1.png" alt="Background Shape" class="absolute top-0 left-0 w-[70vw] md:w-[50vw] z-0 pointer-events-none select-none opacity-80">
-    <img src="../assets/bg4.png" alt="Background Shape" class="absolute top-0 right-0 w-[60vw] md:w-[40vw] z-0 opacity-90 pointer-events-none select-none">
+    <img src="../assets/bg1.png" alt="Background Shape"
+        class="absolute top-0 left-0 w-[70vw] md:w-[50vw] z-0 pointer-events-none select-none opacity-80">
+    <img src="../assets/bg4.png" alt="Background Shape"
+        class="absolute top-0 right-0 w-[60vw] md:w-[40vw] z-0 opacity-90 pointer-events-none select-none">
 
     <!-- Laptop Illustration (over bg1, bottom left) -->
-    <img src="../assets/laptop.png" alt="Laptop and Cup" class="hidden md:block absolute bottom-0 left-0 w-[320px] md:w-[350px] max-w-full drop-shadow-2xl z-10 pointer-events-none select-none">
+    <img src="../assets/laptop.png" alt="Laptop and Cup"
+        class="hidden md:block absolute bottom-0 left-0 w-[320px] md:w-[350px] max-w-full drop-shadow-2xl z-10 pointer-events-none select-none">
 
     <!-- Main content -->
     <div class="relative z-20 flex flex-col md:flex-row items-center justify-end w-full max-w-5xl mx-auto">
         <!-- Right: Login Card -->
         <div class="flex-1 w-full max-w-md bg-[#10132a] rounded-2xl shadow-2xl px-8 py-10 md:ml-8 ">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 tracking-wide" style="color:cyan ">WELCOME TO OMIONIX</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 tracking-wide" style="color:cyan ">WELCOME TO
+                OMIONIX</h2>
             <!-- Google Login -->
-            <button class="flex items-center justify-center w-full bg-white rounded-lg py-3 mb-6 shadow hover:shadow-lg transition">
+            <button
+                class="flex items-center justify-center w-full bg-white rounded-lg py-3 mb-6 shadow hover:shadow-lg transition">
                 <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-6 h-6 mr-2">
                 <span class="text-gray-700 font-medium">Login with Google</span>
             </button>
@@ -43,10 +51,13 @@
                     <div class="relative">
                         <input type="password" id="password" required autocomplete="current-password"
                             class="block w-full px-4 py-2 rounded-lg bg-[#181c36] border border-red-700 text-black-100 focus:outline-none focus:ring-2 focus:ring-[#5a6cff] transition pr-10">
-                        <span class="absolute inset-y-0 right-3 flex items-center cursor-pointer" >
-                            <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        <span class="absolute inset-y-0 right-3 flex items-center cursor-pointer">
+                            <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                             </svg>
                         </span>
                     </div>
@@ -55,7 +66,9 @@
                     <input type="checkbox" id="remember" class="mr-2 accent-[#5a6cff]">
                     <label for="remember" class="text-gray-400 text-sm">Remember me</label>
                 </div>
-                <button type="submit" class="w-full bg-[#5a6cff] hover:bg-[#3d4fd7] text-white py-3 rounded-lg transition mb-2" style="background-color:blue;">Sign Up</button>
+                <button type="submit"
+                    class="w-full bg-[#5a6cff] hover:bg-[#3d4fd7] text-white py-3 rounded-lg transition mb-2"
+                    style="background-color:blue;">Sign Up</button>
             </form>
             <div class="text-center mt-6 text-gray-400 text-sm">
                 Already have a account?
@@ -63,5 +76,63 @@
             </div>
         </div>
     </div>
+
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+    <script>
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyC8LaNW6PGrasUTJwJQlgRsNWJbTKbn1NM",
+            authDomain: "omionix-techhub.firebaseapp.com",
+            projectId: "omionix-techhub",
+            storageBucket: "omionix-techhub.firebasestorage.app",
+            messagingSenderId: "1050111036238",
+            appId: "1:1050111036238:web:582f5534c662a912aaac1f",
+            measurementId: "G-JBKF48YQLR"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.database();
+        const provider = new firebase.auth.GoogleAuthProvider();
+        function saveUserToDB(user) {
+            db.ref('users/' + user.uid).set({
+                uid: user.uid,
+                email: user.email,
+                displayName: user.displayName || '',
+                provider: user.providerData[0].providerId
+            });
+        }
+        // Email/Password Sign Up
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            auth.createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    saveUserToDB(userCredential.user);
+                    alert('Sign up successful! You can now sign in.');
+                    window.location.href = 'signin.html';
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        });
+        // Google Sign Up
+        document.querySelector('button').addEventListener('click', function (e) {
+            e.preventDefault();
+            auth.signInWithPopup(provider)
+                .then((result) => {
+                    saveUserToDB(result.user);
+                    alert('Sign up with Google successful!');
+                    window.location.href = 'signin.html';
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        });
+    </script>
 </body>
+
 </html>
