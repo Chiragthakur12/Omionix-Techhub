@@ -63,5 +63,58 @@
             </div>
         </div>
     </div>
+     <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyC8LaNW6PGrasUTJwJQlgRsNWJbTKbn1NM",
+            authDomain: "omionix-techhub.firebaseapp.com",
+            projectId: "omionix-techhub",
+            storageBucket: "omionix-techhub.firebasestorage.app",
+            messagingSenderId: "1050111036238",
+            appId: "1:1050111036238:web:582f5534c662a912aaac1f",
+            measurementId: "G-JBKF48YQLR"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.database();
+        const provider = new firebase.auth.GoogleAuthProvider();
+        function saveUserToDB(user) {
+            db.ref('users/' + user.uid).set({
+                uid: user.uid,
+                email: user.email,
+                displayName: user.displayName || '',
+                provider: user.providerData[0].providerId
+            });
+        }
+        // Email/Password Sign Up
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            auth.createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    saveUserToDB(userCredential.user);
+                    window.location.href = 'index.html';
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        });
+        // Google Sign Up
+        document.querySelector('button').addEventListener('click', function (e) {
+            e.preventDefault();
+            auth.signInWithPopup(provider)
+                .then((result) => {
+                    saveUserToDB(result.user);
+                    window.location.href = 'index.html';
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        });
+    </script>
 </body>
 </html>
