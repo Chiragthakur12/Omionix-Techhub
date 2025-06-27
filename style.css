@@ -51,8 +51,396 @@ span{
   .nav-link:hover::after {
     width: 100%;
   }
+  .box{
+    padding-left:0px;
 
-#curved-border{
-  border-radius:0 50% 0 50% ;
-  border-color: #DF19FB;
+  }
+
+.glass-content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.3);
+  clip-path: path("M56,0 Q350,35 644,0 Q700,0 700,56 V360 Q700,400 644,400 H56 Q0,400 0,360 V56 Q0,0 56,0 Z");
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  max-width: 700px;
+  padding: 3rem 2rem;
+  color: #aabaf8;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+    .glass-content:hover {
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+      transform: scale(1.02);
+    }
+    .glass-content h3 {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: #d1d5db;
+      margin-bottom: 1rem;
+    }
+    .glass-content p {
+      
+      font-size: 0.95rem;
+      line-height: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .start-btn {
+      margin-top: 1.5rem;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid #00ffff;
+      border-radius: 0.5rem;
+      background: transparent;
+      color: #00ffff;
+      font-size: 1rem;
+      box-shadow: 0 0 10px #00ffff;
+      transition: all 0.3s ease-in-out;
+    }
+    .start-btn:hover {
+      background-color: #00ffff;
+      color: #030622;
+      box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1rem 1rem;
+      background-color: #030622;
+      justify-content: center;
+      align-items: center;
+     
+      
+    }
+    @media (min-width: 1024px) {
+      .wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        padding: 4rem 6rem;
+      }
+    }
+    .right-box {
+      text-align: center;
+      color: white;
+      transition: all 0.3s ease-in-out;
+    }
+    .right-box:hover {
+      transform: scale(1.02);
+    }
+    .main-title {
+      font-size: 5rem;
+      font-weight: 800;
+     
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+    }
+    .btn-group {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .team-btn {
+      padding: 0.5rem 1.5rem;
+      border: 1px solid #00ffff;
+      border-radius: 0.5rem;
+      background: transparent;
+      color: #00ffff;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00ffff;
+    }
+    .team-btn:hover {
+      background: #00ffff;
+      color: #030622;
+      box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    }
+    .play-icon {
+      width: 3rem;
+      height: 3rem;
+      border: 2px solid #00ffff;
+      border-radius: 9999px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 10px #00ffff;
+      transition: all 0.3s ease-in-out;
+    }
+    .play-icon:hover {
+      background-color: #00ffff;
+      color: #030622;
+      box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    }
+    .play-text {
+      color: #aabaf8;
+      font-size: 1.125rem;
+    }
+    .play-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .wrapper{
+      padding-top: 0;
+      margin-top: 0;
+   
+    }
+    .pointer-events-none{
+      padding-top: 5rem;
+    }
+    /* Neon Border */
+.neon-border {
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff inset;
+  border-radius: 2.5rem;
+  transition: 0.3s ease;
+}
+.neon-border:hover {
+  box-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff inset;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fadeUp 1s ease-out forwards;
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 2px #00ffff;
+  }
+  50% {
+    text-shadow: 0 0 12px #00ffff;
+  }
+  100% {
+    text-shadow: 0 0 2px #00ffff;
+  }
+}
+.animate-glow {
+  animation: glow 2s infinite ease-in-out;
+}
+
+/* Slide Up */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slide-up {
+  animation: slideUp 0.8s ease-in-out forwards;
+}
+
+/* Button Neon Pulse */
+.animate-pulse {
+  animation: pulseNeon 1.5s infinite;
+}
+@keyframes pulseNeon {
+  0%, 100% {
+    box-shadow: 0 0 8px #00ffff;
+  }
+  50% {
+    box-shadow: 0 0 18px #00ffff;
+  }
+}
+/* Neon border glow animation */
+@keyframes neonBorder {
+  0% {
+    box-shadow: 0 0 5px #00f2ff, 0 0 10px #00f2ff, 0 0 15px #00f2ff;
+  }
+  50% {
+    box-shadow: 0 0 15px #00f2ff, 0 0 30px #00f2ff, 0 0 45px #00f2ff;
+  }
+  100% {
+    box-shadow: 0 0 5px #00f2ff, 0 0 10px #00f2ff, 0 0 15px #00f2ff;
+  }
+}
+
+.page-wrapper {
+  background-color: #030622;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-section {
+  position: relative;
+  font-size: 2.25rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  color: #cccccc;
+  letter-spacing: 5px;
+  margin-bottom: 3rem;
+  padding: 0.4rem 1.2rem;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* Corner Lines */
+.title-section::before,
+.title-section::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border: 3px solid #5C6BFF;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.title-section::before {
+  top: -6px;
+  right: -6px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.title-section::after {
+  bottom: -6px;
+  left: -6px;
+  border-top: none;
+  border-right: none;
+}
+
+/* Hover Neon Glow */
+.title-section:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+  text-shadow: 0 0 5px #5C6BFF, 0 0 10px #5C6BFF;
+}
+
+.title-section:hover::before,
+.title-section:hover::after {
+  box-shadow: 0 0 10px #5C6BFF, 0 0 20px #5C6BFF;
+  border-color: #5C6BFF;
+}
+
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card-container {
+  position: relative;
+  width: 300px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Animate neon + zoom on hover */
+.card-container:hover .glass-box {
+  animation: neonBorder 1.5s infinite alternate;
+  border: 1px solid #00f2ff;
+}
+
+.card-container:hover .card-image img,
+.card-container:hover .glass-box h3,
+.card-container:hover .glass-box button {
+  transform: scale(1.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Smooth transition */
+.card-image img,
+.glass-box h3,
+.glass-box button {
+  transition: transform 0.4s ease;
+}
+
+.card-image {
+  position: absolute;
+  top: -10px;
+  z-index: 10;
+}
+
+.card-image img {
+  height: 150px;
+  width: auto;
+  display: block;
+}
+
+.glass-box {
+  margin-top: 40px;
+  width: 90%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 60px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4);
+  color: white;
+  padding-top: 120px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.glass-box h3 {
+  font-size: 1.130rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.glass-box button {
+  border: 1px solid white;
+  padding: 0.25rem 1rem;
+  border-radius: 0.375rem;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #ffffff44;
+}
+
+.glass-box button:hover {
+  background-color: white;
+  color: #0C1033;
+  box-shadow: 0 0 10px #00f2ff, 0 0 15px #00f2ff;
 }
