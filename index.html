@@ -140,19 +140,24 @@
   </div>
 
 </div>
+ <img src="bg1.png" 
+         alt="background" 
+         class="absolute right-0 0 top-200 transform -translate-y-77 lg:w-[70%] w-[75%] max-w-[700px] z-25 pointer-events-none" />
+<img src="BG IMAGE 3 - Copy.png" 
+         alt="background" 
+         class="absolute right 1000  top-250 transform -translate-y-66 lg:w-[60%] w-[65%] max-w-[600px] z-25 pointer-events-none" />
+
 <section>
-  <div class="relative overflow-hidden bg-[#030622]">
+  <div class="relative overflow-hidden" >
     
     
+
 
     <!-- Main Wrapper Content -->
-    <div class="wrapper relative z-10" style="padding: 20px">
-       <img src="bg1.png" 
-         alt="background" 
-         class="absolute right-0 0 top-85 transform -translate-y-77 lg:w-[70%] w-[75%] max-w-[700px] z-0 pointer-events-none" />
-
+    <div class="wrapper relative z-8" style="padding: 20px">
+      
      <!-- LEFT GLASS BOX with neon effect -->
-<div class="glass-content neon-border animate-fade-up">
+<div class="glass-content neon-border animate-fade-up z-21">
   <h3 class="heading animate-glow">How We Can Help You</h3>
   <p class="intro animate-slide-up">
     Want to turn your ideas into a powerful startup website?<br />
@@ -169,7 +174,7 @@
 
 
       <!-- RIGHT CONTENT -->
-      <div class="right-box">
+      <div class="right-box ">
         <h1 class="main-title text-white">KNOW ABOUT US</h1>
         <div class="btn-group">
           <button class="team-btn">Our Team</button>
@@ -260,6 +265,114 @@
       </div>
     </div>
 </section>
+<img src="BG IMAGE 3 - Copy - Copy.png" 
+     alt="background shape" 
+     class="absolute left-55 top-365 transform scale-90 lg:w-[80%] w-[85%] max-w-[1000px]  z-25 pointer-events-none" />
+
+
+
+<div class="review-wrapper">
+    <section class="review-section">
+      <h2 class="heading-highlight">CUSTOMER REVIEW</h2>
+      <div class="review-slider">
+        <button class="nav-btn left-btn" onclick="slideLeft()">&#8249;</button>
+        <div class="review-cards" id="cardWrapper">
+          <!-- Card 1 -->
+          <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User 1" />
+            <h3 class="review-name">User 1</h3>
+            <div class="review-stars">
+              <i class="fas fa-star">★</i>
+              <i class="fas fa-star">★</i>
+              <i class="fas fa-star">★</i>
+              <i class="fas fa-star-half-alt">★</i>
+              <i class="far fa-star">★</i>
+            </div>
+            <p class="review-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="start-btn">Read More</button>
+          </div>
+          <!-- Card 2 -->
+          <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User 2" />
+            <h3 class="review-name">User 2</h3>
+            <div class="review-stars">
+              <i class="fas fa-star">★</i>
+              <i class="fas fa-star">★</i>
+              <i class="fas fa-star">★</i>
+              <i class="fas fa-star">★</i>
+              <i class="far fa-star">★</i>
+            </div>
+            <p class="review-desc">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="start-btn">Read More</button>
+          </div>
+         
+          <!-- Card 3 -->
+          <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="User 3" />
+            <h3 class="review-name">User 3</h3>
+            <div class="review-stars">
+              <i class="fas fa-star">★</i>
+              <i class="fas fa-star">★</i>
+              <i class="fas fa-star-half-alt">★</i>
+              <i class="far fa-star">★</i>
+              <i class="far fa-star">★</i>
+            </div>
+            <p class="review-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <button class="start-btn">Read More</button>
+          </div>
+        </div>
+        <button class="nav-btn right-btn" onclick="slideRight()">&#8250;</button>
+      </div>
+    </section>
+    <!-- Footer Section -->
+     
+  <footer class="bg-black text-white py-10 w-full ">
+    <div class="w-full flex flex-col md:flex-row justify-between gap-12 px-4 md:px-8">
+
+      <!-- Quick Links -->
+      <div>
+        <h2 class="text-xl font-bold mb-4 transition duration-300 transform hover:scale-105 hover:text-cyan-400 hover:drop-shadow-[0_0_10px_cyan]">Quick Link’s</h2>
+        <ul class="space-y-3 text-lg">
+          <li><a href="#" class="block transition duration-300 transform hover:scale-105 hover:text-cyan-300 hover:drop-shadow-[0_0_8px_cyan]">Home</a></li>
+          <li><a href="#" class="block transition duration-300 transform hover:scale-105 hover:text-cyan-300 hover:drop-shadow-[0_0_8px_cyan]">Services</a></li>
+          <li><a href="#" class="block transition duration-300 transform hover:scale-105 hover:text-cyan-300 hover:drop-shadow-[0_0_8px_cyan]">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Subscribe Box -->
+      <div class="w-full max-w-xl">
+        <h2 class="text-xl font-bold mb-4 transition duration-300 transform hover:scale-105 hover:text-pink-400 hover:drop-shadow-[0_0_10px_pink]">For Every Update.</h2>
+        <div class="flex border border-white rounded-md overflow-hidden">
+          <input type="email" placeholder="Enter Email" class="flex-grow px-4 py-3 text-black placeholder:text-gray-500 focus:bg-white focus:text-black outline-none transition duration-300" />
+          <button class="bg-white text-black font-bold px-6 py-3 transition duration-300 transform hover:scale-105 hover:bg-pink-500 hover:text-white hover:drop-shadow-[0_0_10px_pink]">SUBSCRIBE</button>
+        </div>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center space-y-4">
+          <a href="#" class="transition duration-300 transform hover:scale-110 hover:drop-shadow-[0_0_10px_white]"><img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" /></a>
+          <a href="#" class="transition duration-300 transform hover:scale-110 hover:drop-shadow-[0_0_10px_white]"><img src="https://img.icons8.com/ios-filled/30/ffffff/linkedin.png" /></a>
+          <a href="#" class="transition duration-300 transform hover:scale-110 hover:drop-shadow-[0_0_10px_white]"><img src="https://img.icons8.com/ios-filled/30/ffffff/mail.png" /></a>
+          <a href="#" class="transition duration-300 transform hover:scale-110 hover:drop-shadow-[0_0_10px_white]"><img src="https://img.icons8.com/ios-filled/30/ffffff/phone.png" /></a>
+        </div>
+        <p class="text-sm text-gray-300 mt-6">Omionix © All right reserve</p>
+      </div>
+
+    </div>
+  </footer>
+  </div>
+  <script>
+    const cardWrapper = document.getElementById('cardWrapper');
+
+    function slideLeft() {
+      cardWrapper.scrollBy({ left: -320, behavior: 'smooth' });
+    }
+
+    function slideRight() {
+      cardWrapper.scrollBy({ left: 320, behavior: 'smooth' });
+    }
+  </script>
 
 
 
